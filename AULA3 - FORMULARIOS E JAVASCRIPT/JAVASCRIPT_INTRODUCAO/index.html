@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Introdução</title>
+    <script src="js/scripts.js"></script>
+    <script>
+        console.log("Executou um JAVA SCRIPT")
+
+        function OlaMundo() {
+            alert("Olá mundo");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <input type="button" onclick="OlaMundo()" value="Executar JS">
+    </div>
+    <div>
+
+        <input type="button" onclick="olaPessoa('Geovani')" value="Executar Nome">
+    </div>
+    <div>
+        <input type="text" id="nomeInput" placeholder="Digite seu nome">
+        <input type="button" onclick="olaPessoa(document.getElementById('nomeInput').value)" value="Chamar olaPessoa">
+    </div>
+
+</body>
+
+</html>
