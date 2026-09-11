@@ -1,28 +1,31 @@
-import React from 'react'
-import { mockPosts } from '../data/mockPosts'
-import PostCard from '../components/PostCard'
+import { mockPosts } from '../data/mockPosts';
+import PostCard from '../components/PostCard';
+import { Container, Typography, Box } from '@mui/material';
+
 
 function Home() {
     return (
-        <main style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-            <header style={{ marginBottom: '32px', textAlign: 'center' }}>
-                <h1>Blog do TADS</h1>
-                <p style={{ color: '#6b7280' }}>Acompanhe as últimas publicações da turma</p>
-            </header>
+        <Container maxWidth="md" sx={{ py: 4 }}>
+            <Box sx={{ textCenter: 'center', mb: 4, textAlign: 'center' }}>
+                <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold', color: '#111827', mb: 1 }}>
+                    Publicações da Turma
+                </Typography>
+                <Typography variant="subtitle1" color="text.secondary">
+                    Acompanhe os artigos de tecnologia produzidos no curso de TADS
+                </Typography>
+            </Box>
 
-            <section>
-                {mockPosts.map((post) => (
-                    <PostCard
-                        key={post.id}
-                        titulo={post.titulo}
-                        autor={post.autor}
-                        data={post.data}
-                        resumo={post.resumo}
-                        categoria={post.categoria}
-                    />
-                ))}
-            </section>
-        </main>
+            {mockPosts.map((post) => (
+                <PostCard
+                    key={post.id}
+                    titulo={post.titulo}
+                    autor={post.autor}
+                    data={post.data}
+                    resumo={post.resumo}
+                    categoria={post.categoria}
+                />
+            ))}
+        </Container>
     )
 }
 
