@@ -1,0 +1,34 @@
+.container {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-alunos {
+  list-style: none;
+  padding: 0;
+}
+
+.aluno-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.situacao {
+  font-weight: bold;
+}
+
+.situacao.aprovado {
+  color: #2e7d32;
+}
+
+.situacao.reprovado {
+  color: #c62828;
+}
